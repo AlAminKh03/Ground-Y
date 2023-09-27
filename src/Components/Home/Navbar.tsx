@@ -1,8 +1,4 @@
-import React from "react";
-
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   return (
     <div className="my-10  tracking-wider font-mono text-xl">Ground Y</div>
   );
