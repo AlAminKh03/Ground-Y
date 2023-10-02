@@ -1,13 +1,12 @@
-import { ShipType } from "./Hero";
-
-interface SingleShipType {
-  ship: ShipType;
-}
-const Ship = ({ ship }: SingleShipType) => {
+const Ship = ({ ship }: any) => {
   return (
     <div className="my-20 grid grid-cols-12 ">
       <div className="col-span-8">
-        <img src={ship.image} alt={ship.name} className="w-[700px] h-[500px]" />
+        <img
+          src={ship.image!}
+          alt={ship.name!}
+          className="w-[700px] h-[500px]"
+        />
       </div>
       <div className="font-mono col-span-4 flex flex-col items-start justify-center">
         <p className="text-xl">{ship.name}</p>

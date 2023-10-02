@@ -7,17 +7,17 @@ interface MissionType {
   flight: number;
 }
 export interface ShipType {
-  id: string;
-  image: string;
-  imo: number;
-  model: string;
-  name: string;
-  roles: string[];
-  type: string;
-  year_built: number;
-  status: string;
-  missions: MissionType;
-  active: boolean;
+  id?: string | null;
+  image?: string | null;
+  imo?: number | null;
+  model?: string | null;
+  name?: string | null;
+  roles?: (string | null)[];
+  type?: string | null;
+  year_built?: number | null;
+  status?: string | null;
+  missions?: MissionType | null;
+  active?: boolean | null;
 }
 
 const Hero = () => {
