@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_SHIP } from "../../graphql/ship";
 import Navbar from "./Navbar";
 import Ship from "./Ship";
+import { ShipDataQuery } from "../../__generated__/graphql";
 
 type Props = {};
 
@@ -25,7 +26,7 @@ const Hero2 = (props: Props) => {
       </div>
       {data?.ships?.slice(6, 20).map((ship) => (
         <div key={ship?.id}>
-          <Ship ship={ship} />
+          <Ship ship={ship as ShipDataQuery} />
         </div>
       ))}
     </div>

@@ -14,7 +14,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  */
 const documents = {
     "\n    query Ship {\n      ships {\n        id\n        image\n        imo\n        model\n        name\n        roles\n        type\n        year_built\n        status\n        missions {\n          name\n          flight\n        }\n        active\n      }\n    }\n  ": types.ShipDocument,
-    "\n  query Ship {\n    ships {\n      id\n      image\n      imo\n      model\n      name\n      roles\n      type\n      year_built\n      status\n      missions {\n        name\n        flight\n      }\n      active\n    }\n  }\n": types.ShipDocument,
+    "\n  query ShipData {\n    ships {\n      id\n      image\n      imo\n      model\n      name\n      roles\n      type\n      year_built\n      status\n      missions {\n        name\n        flight\n      }\n      active\n    }\n  }\n": types.ShipDataDocument,
 };
 
 /**
@@ -38,7 +38,7 @@ export function gql(source: "\n    query Ship {\n      ships {\n        id\n    
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\n  query Ship {\n    ships {\n      id\n      image\n      imo\n      model\n      name\n      roles\n      type\n      year_built\n      status\n      missions {\n        name\n        flight\n      }\n      active\n    }\n  }\n"): (typeof documents)["\n  query Ship {\n    ships {\n      id\n      image\n      imo\n      model\n      name\n      roles\n      type\n      year_built\n      status\n      missions {\n        name\n        flight\n      }\n      active\n    }\n  }\n"];
+export function gql(source: "\n  query ShipData {\n    ships {\n      id\n      image\n      imo\n      model\n      name\n      roles\n      type\n      year_built\n      status\n      missions {\n        name\n        flight\n      }\n      active\n    }\n  }\n"): (typeof documents)["\n  query ShipData {\n    ships {\n      id\n      image\n      imo\n      model\n      name\n      roles\n      type\n      year_built\n      status\n      missions {\n        name\n        flight\n      }\n      active\n    }\n  }\n"];
 
 export function gql(source: string) {
   return (documents as any)[source] ?? {};

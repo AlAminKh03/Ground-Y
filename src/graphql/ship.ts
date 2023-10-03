@@ -1,7 +1,7 @@
 import { gql } from "../__generated__";
 
 export const GET_SHIP = gql(`
-  query Ship {
+  query ShipData {
     ships {
       id
       image
